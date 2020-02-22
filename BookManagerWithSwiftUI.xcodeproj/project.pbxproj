@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				5B933F562401B50900F59FAA /* Model */,
-				5B933F572401B51200F59FAA /* Screen */,
+				5B933F572401B51200F59FAA /* View */,
 				5B933F342401B39F00F59FAA /* AppDelegate.swift */,
 				5B933F362401B39F00F59FAA /* SceneDelegate.swift */,
 				5B933F3A2401B3A300F59FAA /* Assets.xcassets */,
@@ -135,17 +135,17 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		5B933F572401B51200F59FAA /* Screen */ = {
+		5B933F572401B51200F59FAA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5B933F582401B55B00F59FAA /* SignInView.swift */,
-				5B933F5A2401B57400F59FAA /* SignUpView.swift */,
-				5B933F5C2401B58000F59FAA /* HomeView.swift */,
-				5B933F5E2401B58F00F59FAA /* SettingView.swift */,
-				5B933F602401B5A200F59FAA /* EditView.swift */,
-				5B933F622401B5AF00F59FAA /* AddView.swift */,
+				5B933F6E2401D05300F59FAA /* SignIn */,
+				5B933F6F2401D06000F59FAA /* SignUp */,
+				5B933F702401D07900F59FAA /* Home */,
+				5B933F732401D0A100F59FAA /* Add */,
+				5B933F722401D09600F59FAA /* Edit */,
+				5B933F712401D08700F59FAA /* Setting */,
 			);
-			path = Screen;
+			path = View;
 			sourceTree = "<group>";
 		};
 		5B933F642401C74200F59FAA /* Entity */ = {
@@ -164,6 +164,54 @@
 				5B933F6C2401CB5300F59FAA /* RequestBuilder.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		5B933F6E2401D05300F59FAA /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				5B933F582401B55B00F59FAA /* SignInView.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		5B933F6F2401D06000F59FAA /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				5B933F5A2401B57400F59FAA /* SignUpView.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		5B933F702401D07900F59FAA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5B933F5C2401B58000F59FAA /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5B933F712401D08700F59FAA /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				5B933F5E2401B58F00F59FAA /* SettingView.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		5B933F722401D09600F59FAA /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				5B933F602401B5A200F59FAA /* EditView.swift */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		5B933F732401D0A100F59FAA /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				5B933F622401B5AF00F59FAA /* AddView.swift */,
+			);
+			path = Add;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
