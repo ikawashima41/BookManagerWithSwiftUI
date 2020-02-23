@@ -22,7 +22,23 @@
 		5B933F662401C75A00F59FAA /* BookEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933F652401C75A00F59FAA /* BookEntity.swift */; };
 		5B933F682401C76800F59FAA /* AuthEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933F672401C76800F59FAA /* AuthEntity.swift */; };
 		5B933F6B2401CA2B00F59FAA /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933F6A2401CA2B00F59FAA /* RequestType.swift */; };
-		5B933F6D2401CB5300F59FAA /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933F6C2401CB5300F59FAA /* RequestBuilder.swift */; };
+		5B933F6D2401CB5300F59FAA /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933F6C2401CB5300F59FAA /* APIRequest.swift */; };
+		5B933FA32402723D00F59FAA /* Keyboardobserber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FA22402723D00F59FAA /* Keyboardobserber.swift */; };
+		5B933FA52402749B00F59FAA /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FA42402749B00F59FAA /* TabBarView.swift */; };
+		5B933FA8240276DC00F59FAA /* AccountInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FA7240276DC00F59FAA /* AccountInfoView.swift */; };
+		5B933FAA24027A2500F59FAA /* BookInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FA924027A2500F59FAA /* BookInfoView.swift */; };
+		5B933FAC24027A9A00F59FAA /* BookRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FAB24027A9A00F59FAA /* BookRow.swift */; };
+		5B933FAE24027DE500F59FAA /* AccountAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FAD24027DE500F59FAA /* AccountAPIClient.swift */; };
+		5B933FB024027DF100F59FAA /* BookAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FAF24027DF100F59FAA /* BookAPIClient.swift */; };
+		5B933FB3240282B000F59FAA /* AppUserDetaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FB2240282B000F59FAA /* AppUserDetaults.swift */; };
+		5B933FB524028E0C00F59FAA /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FB424028E0C00F59FAA /* SignInViewModel.swift */; };
+		5B933FB72402923800F59FAA /* AppResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FB62402923800F59FAA /* AppResource.swift */; };
+		5B933FB924029EE600F59FAA /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FB824029EE600F59FAA /* SignUpViewModel.swift */; };
+		5B933FBB24029F4D00F59FAA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FBA24029F4D00F59FAA /* HomeViewModel.swift */; };
+		5B933FBD24029F5800F59FAA /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FBC24029F5800F59FAA /* AddViewModel.swift */; };
+		5B933FBF24029F6300F59FAA /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FBE24029F6300F59FAA /* EditViewModel.swift */; };
+		5B933FC124029F6F00F59FAA /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FC024029F6F00F59FAA /* SettingViewModel.swift */; };
+		5B933FC32402DD2300F59FAA /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FC22402DD2300F59FAA /* ImagePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +71,23 @@
 		5B933F652401C75A00F59FAA /* BookEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookEntity.swift; sourceTree = "<group>"; };
 		5B933F672401C76800F59FAA /* AuthEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEntity.swift; sourceTree = "<group>"; };
 		5B933F6A2401CA2B00F59FAA /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
-		5B933F6C2401CB5300F59FAA /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		5B933F6C2401CB5300F59FAA /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		5B933FA22402723D00F59FAA /* Keyboardobserber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboardobserber.swift; sourceTree = "<group>"; };
+		5B933FA42402749B00F59FAA /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		5B933FA7240276DC00F59FAA /* AccountInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountInfoView.swift; sourceTree = "<group>"; };
+		5B933FA924027A2500F59FAA /* BookInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoView.swift; sourceTree = "<group>"; };
+		5B933FAB24027A9A00F59FAA /* BookRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRow.swift; sourceTree = "<group>"; };
+		5B933FAD24027DE500F59FAA /* AccountAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountAPIClient.swift; sourceTree = "<group>"; };
+		5B933FAF24027DF100F59FAA /* BookAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAPIClient.swift; sourceTree = "<group>"; };
+		5B933FB2240282B000F59FAA /* AppUserDetaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserDetaults.swift; sourceTree = "<group>"; };
+		5B933FB424028E0C00F59FAA /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		5B933FB62402923800F59FAA /* AppResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResource.swift; sourceTree = "<group>"; };
+		5B933FB824029EE600F59FAA /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		5B933FBA24029F4D00F59FAA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5B933FBC24029F5800F59FAA /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		5B933FBE24029F6300F59FAA /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
+		5B933FC024029F6F00F59FAA /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		5B933FC22402DD2300F59FAA /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +129,12 @@
 		5B933F332401B39F00F59FAA /* BookManagerWithSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				5B933F562401B50900F59FAA /* Model */,
+				5B933FA12402721F00F59FAA /* Utils */,
+				5B933F562401B50900F59FAA /* API */,
 				5B933F572401B51200F59FAA /* View */,
 				5B933F342401B39F00F59FAA /* AppDelegate.swift */,
 				5B933F362401B39F00F59FAA /* SceneDelegate.swift */,
+				5B933FB62402923800F59FAA /* AppResource.swift */,
 				5B933F3A2401B3A300F59FAA /* Assets.xcassets */,
 				5B933F3F2401B3A300F59FAA /* LaunchScreen.storyboard */,
 				5B933F422401B3A300F59FAA /* Info.plist */,
@@ -126,18 +160,20 @@
 			path = BookManagerWithSwiftUITests;
 			sourceTree = "<group>";
 		};
-		5B933F562401B50900F59FAA /* Model */ = {
+		5B933F562401B50900F59FAA /* API */ = {
 			isa = PBXGroup;
 			children = (
+				5B933FB124027DF600F59FAA /* APIClient */,
 				5B933F692401CA0F00F59FAA /* Request */,
 				5B933F642401C74200F59FAA /* Entity */,
 			);
-			path = Model;
+			path = API;
 			sourceTree = "<group>";
 		};
 		5B933F572401B51200F59FAA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B933FA62402760B00F59FAA /* Components */,
 				5B933F6E2401D05300F59FAA /* SignIn */,
 				5B933F6F2401D06000F59FAA /* SignUp */,
 				5B933F702401D07900F59FAA /* Home */,
@@ -161,7 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				5B933F6A2401CA2B00F59FAA /* RequestType.swift */,
-				5B933F6C2401CB5300F59FAA /* RequestBuilder.swift */,
+				5B933F6C2401CB5300F59FAA /* APIRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -170,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				5B933F582401B55B00F59FAA /* SignInView.swift */,
+				5B933FB424028E0C00F59FAA /* SignInViewModel.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -178,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				5B933F5A2401B57400F59FAA /* SignUpView.swift */,
+				5B933FB824029EE600F59FAA /* SignUpViewModel.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -186,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				5B933F5C2401B58000F59FAA /* HomeView.swift */,
+				5B933FBA24029F4D00F59FAA /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -194,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				5B933F5E2401B58F00F59FAA /* SettingView.swift */,
+				5B933FC024029F6F00F59FAA /* SettingViewModel.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -202,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				5B933F602401B5A200F59FAA /* EditView.swift */,
+				5B933FBE24029F6300F59FAA /* EditViewModel.swift */,
 			);
 			path = Edit;
 			sourceTree = "<group>";
@@ -210,8 +251,39 @@
 			isa = PBXGroup;
 			children = (
 				5B933F622401B5AF00F59FAA /* AddView.swift */,
+				5B933FBC24029F5800F59FAA /* AddViewModel.swift */,
 			);
 			path = Add;
+			sourceTree = "<group>";
+		};
+		5B933FA12402721F00F59FAA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5B933FA22402723D00F59FAA /* Keyboardobserber.swift */,
+				5B933FB2240282B000F59FAA /* AppUserDetaults.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5B933FA62402760B00F59FAA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5B933FA7240276DC00F59FAA /* AccountInfoView.swift */,
+				5B933FA924027A2500F59FAA /* BookInfoView.swift */,
+				5B933FA42402749B00F59FAA /* TabBarView.swift */,
+				5B933FAB24027A9A00F59FAA /* BookRow.swift */,
+				5B933FC22402DD2300F59FAA /* ImagePickerView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5B933FB124027DF600F59FAA /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				5B933FAD24027DE500F59FAA /* AccountAPIClient.swift */,
+				5B933FAF24027DF100F59FAA /* BookAPIClient.swift */,
+			);
+			path = APIClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,17 +388,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B933F352401B39F00F59FAA /* AppDelegate.swift in Sources */,
+				5B933FA32402723D00F59FAA /* Keyboardobserber.swift in Sources */,
+				5B933FA52402749B00F59FAA /* TabBarView.swift in Sources */,
+				5B933FBD24029F5800F59FAA /* AddViewModel.swift in Sources */,
+				5B933FC32402DD2300F59FAA /* ImagePickerView.swift in Sources */,
 				5B933F5B2401B57400F59FAA /* SignUpView.swift in Sources */,
 				5B933F632401B5AF00F59FAA /* AddView.swift in Sources */,
-				5B933F6D2401CB5300F59FAA /* RequestBuilder.swift in Sources */,
+				5B933F6D2401CB5300F59FAA /* APIRequest.swift in Sources */,
 				5B933F682401C76800F59FAA /* AuthEntity.swift in Sources */,
 				5B933F6B2401CA2B00F59FAA /* RequestType.swift in Sources */,
+				5B933FAC24027A9A00F59FAA /* BookRow.swift in Sources */,
+				5B933FB72402923800F59FAA /* AppResource.swift in Sources */,
+				5B933FA8240276DC00F59FAA /* AccountInfoView.swift in Sources */,
+				5B933FB3240282B000F59FAA /* AppUserDetaults.swift in Sources */,
 				5B933F612401B5A200F59FAA /* EditView.swift in Sources */,
+				5B933FB924029EE600F59FAA /* SignUpViewModel.swift in Sources */,
+				5B933FAE24027DE500F59FAA /* AccountAPIClient.swift in Sources */,
+				5B933FC124029F6F00F59FAA /* SettingViewModel.swift in Sources */,
 				5B933F662401C75A00F59FAA /* BookEntity.swift in Sources */,
 				5B933F372401B39F00F59FAA /* SceneDelegate.swift in Sources */,
 				5B933F5F2401B58F00F59FAA /* SettingView.swift in Sources */,
+				5B933FB524028E0C00F59FAA /* SignInViewModel.swift in Sources */,
+				5B933FBB24029F4D00F59FAA /* HomeViewModel.swift in Sources */,
 				5B933F5D2401B58000F59FAA /* HomeView.swift in Sources */,
+				5B933FB024027DF100F59FAA /* BookAPIClient.swift in Sources */,
 				5B933F592401B55B00F59FAA /* SignInView.swift in Sources */,
+				5B933FBF24029F6300F59FAA /* EditViewModel.swift in Sources */,
+				5B933FAA24027A2500F59FAA /* BookInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

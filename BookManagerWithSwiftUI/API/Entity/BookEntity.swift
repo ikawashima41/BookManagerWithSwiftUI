@@ -22,9 +22,9 @@ struct Book: Decodable {
     }
 }
 
-struct BookListEntity: Decodable {
+struct BookListEntity<T: Decodable>: Decodable {
     var status: Int
-    var result: [Book]
+    var result: [T]
 }
 
 struct BookEntity: Decodable {
