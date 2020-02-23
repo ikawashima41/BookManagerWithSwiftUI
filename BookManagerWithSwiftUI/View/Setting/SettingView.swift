@@ -10,12 +10,14 @@ import SwiftUI
 
 struct SettingView: View {
 
-    @State var enableLogut: Bool = false
+    @State var enableSignOut: Bool = false
+    private let viewModel = SettingViewModel()
 
     var body: some View {
         NavigationView {
             Button(action: {
-                self.enableLogut.toggle()
+                self.enableSignOut.toggle()
+                self.viewModel.logout()
             }) {
                 Text("ログアウトします")
             }

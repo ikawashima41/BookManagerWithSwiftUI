@@ -9,39 +9,54 @@
 import SwiftUI
 
 struct SignUpView: View {
-    @State var mailAddress: String = ""
-    @State var password: String = ""
-    @State var confirmedPassword: String = ""
-    @State var enableSignUp: Bool = false
+    
+    @State var showHomeView: Bool = false
+    @State var showDismissButton: Bool = false
+    
+    @ObservedObject var viewModel = SignUpViewModel()
 
     var body: some View {
 
         NavigationView {
-            VStack {
+            VStack(alignment: .leading) {
                 Text("メールアドレス")
-                TextField("メールアドレスを入力して下さい", text: $mailAddress)
+                TextField("メールアドレスを入力して下さい", text: $viewModel.email)
                     .textFieldStyle(
                         RoundedBorderTextFieldStyle()
                 )
                 Text("パスワード")
-                TextField("パスワードを入力して下さい", text: $password)
+                TextField("パスワードを入力して下さい", text: $viewModel.password)
                     .textFieldStyle(
                         RoundedBorderTextFieldStyle()
                 )
 
                 Text("パスワード確認")
-                TextField("確認用パスワードを入力して下さい", text: $confirmedPassword)
+                TextField("確認用パスワードを入力して下さい", text: $viewModel.confirmedPassword)
                     .textFieldStyle(
                         RoundedBorderTextFieldStyle()
                 )
 
-                Button(action: {
-                    self.enableSignUp.toggle()
-                }) {
-                    Text("新規登録します")
+                if viewModel.enableSignUp {
+                    Button(action: {
+                        self.showHomeView.toggle()
+                        //self.viewModel.signUp()
+                    }) {
+                        Text("新規登録")
+                    }.sheet(isPresented: $showHomeView) {
+                        TabBarView()
+                    }
                 }
-            }
-            .navigationBarTitle("新規登録画面")
+            }.padding()
+                .navigationBarTitle("新規登録画面")
+                .navigationBarItems(leading:
+                    Button(action: {
+                        self.showDismissButton = true
+                    }) {
+                        Text("戻る")
+                    }.sheet(isPresented: $showDismissButton) {
+                        SignInView()
+                    }
+            )
         }
     }
 }

@@ -10,37 +10,40 @@ import SwiftUI
 
 struct EditView: View {
 
-    @State var purchaseDate: Date = Date()
-    @State var title: String = ""
-    @State var price: String = ""
-    
+    @ObservedObject var keyboard = KeyboardObserver()
+    @State var image: UIImage?
+    @State var showImagePicker: Bool = false
+    @State var showDismissButton: Bool = false
+
     var body: some View {
         NavigationView {
             VStack {
                 HStack {
-                    Image("")
-                    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                }
-
-                VStack {
-                    Text("タイトル")
-                    TextField("タイトルを入力して下さい", text: $title)
-                        .textFieldStyle(
-                            RoundedBorderTextFieldStyle()
-                    )
-                    Text("価格")
-                    TextField("価格を入力して下さい", text: $price)
-                        .textFieldStyle(
-                            RoundedBorderTextFieldStyle()
-                    )
-                    Text("購入日")
-                    DatePicker(selection: $purchaseDate, displayedComponents: [.date]) {
-                        Text("購入日を選択して下さい")
+                    if image == nil {
+                        Rectangle()
+                            .frame(width: 300, height: 200, alignment: .top)
+                    } else {
+                        Image(uiImage: image ?? UIImage())
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 300, height: 300, alignment: .top)
+                            .clipped()
+                    }
+                    Button(action: {
+                        self.showImagePicker = true
+                    }) {
+                        Text("画像選択")
+                    }.sheet(isPresented: $showImagePicker) {
+                        ImagePickerView(image: self.$image)
                     }
                 }
+                BookInfoView()
             }
-            .navigationBarTitle("編集画面")
-        }
+        }.onAppear{
+            self.keyboard.startObserve()
+        }.onDisappear{
+            self.keyboard.stopObserve()
+        }.padding(.bottom, keyboard.keyboardHeight)
     }
 }
 

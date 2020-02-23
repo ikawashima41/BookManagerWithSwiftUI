@@ -10,31 +10,39 @@ import SwiftUI
 
 struct HomeView: View {
 
+    @State var showAddView: Bool = false
+
+    var bookRow: [BookRowData]
 
     var body: some View {
         NavigationView {
-            HStack {
-                Image("")
-                VStack {
-                    Text("タイトル")
-                    HStack {
-                        Text("価格")
-                        Text("購入日")
-                    }
+            List {
+                NavigationLink(destination: EditView()) {
+                    BookRow(row: self.bookRow)
                 }
             }
-            .navigationBarTitle("Home画面")
+            .navigationBarTitle("ホーム画面")
+            .navigationBarItems(trailing:
+                Button(action: {
+                    self.showAddView.toggle()
+                }) {
+                    Text("書籍追加")
+                }.sheet(isPresented: $showAddView) {
+                    AddView()
+                }
+            )
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(bookRow: [])
     }
 }
 
-struct BookViewData {
+struct BookRowData: Identifiable {
+    var id: Int
     var title: String
     var price: String
     var purchaseDate: String

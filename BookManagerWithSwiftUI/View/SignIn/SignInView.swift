@@ -10,38 +10,53 @@ import SwiftUI
 
 struct SignInView: View {
 
-    @State var mailAddress: String = ""
-    @State var password: String = ""
-    @State var enableSignIn: Bool = false
+    @State var showSignUpView: Bool = false
+    @State var showHomeView: Bool = false
+
+    @ObservedObject var viewModel = SignInViewModel()
 
     var body: some View {
         NavigationView {
             VStack {
-                Text("メールアドレス")
-                TextField("メールアドレスを入力して下さい", text: $mailAddress)
-                    .textFieldStyle(
-                        RoundedBorderTextFieldStyle()
+                VStack(alignment: .leading) {
+                    Text("メールアドレス")
+                    TextField("メールアドレスを入力して下さい", text: $viewModel.email)
+                        .textFieldStyle(
+                            RoundedBorderTextFieldStyle()
+                    )
+                    Text("パスワード")
+                    TextField("パスワードを入力して下さい", text: $viewModel.password)
+                        .textFieldStyle(
+                            RoundedBorderTextFieldStyle()
+                    )
+                    if viewModel.enableSignIn {
+                        Button(action: {
+                            self.showHomeView.toggle()
+                            //self.viewModel.signIn()
+                        }) {
+                            Text("ログイン")
+                        }.sheet(isPresented: $showHomeView) {
+                            TabBarView()
+                        }
+                    }
+                }.padding()
+                .navigationBarTitle("ログイン画面")
+                .navigationBarItems(trailing:
+                    Button(action: {
+                        self.showSignUpView.toggle()
+                    }) {
+                        Text("新規登録")
+                    }.sheet(isPresented: $showSignUpView) {
+                        SignUpView()
+                    }
                 )
-
-                Text("パスワード")
-                TextField("パスワードを入力して下さい", text: $password)
-                    .textFieldStyle(
-                        RoundedBorderTextFieldStyle()
-                )
-
-                Button(action: {
-                    self.enableSignIn.toggle()
-                }) {
-                    Text("ログイン")
-                }
             }
-            .navigationBarTitle("ログイン画面")
         }
     }
 }
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView()
+        SignInView(viewModel: SignInViewModel())
     }
 }
