@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  BookCell.swift
 //  BookManagerWithSwiftUI
 //
 //  Created by Iichiro Kawashima on 2020/02/23.
@@ -8,14 +8,16 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct BookRow: View {
 
+    var row: [BookRowData]
 
     var body: some View {
-        NavigationView {
+        ScrollView {
             HStack {
-                Image("")
-                VStack {
+                Image(systemName: "house.fill")
+                Divider()
+                VStack(alignment: .leading) {
                     Text("タイトル")
                     HStack {
                         Text("価格")
@@ -23,20 +25,12 @@ struct HomeView: View {
                     }
                 }
             }
-            .navigationBarTitle("Home画面")
-        }
+        }.padding()
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
+struct BookRow_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        BookRow(row: [])
     }
-}
-
-struct BookViewData {
-    var title: String
-    var price: String
-    var purchaseDate: String
-    var image: String
 }
