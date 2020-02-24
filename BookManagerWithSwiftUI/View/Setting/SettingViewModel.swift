@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-final class SettingViewModel {
+final class SettingViewModel: ObservableObject, Identifiable {
 
     private var cancellableSet: Set<AnyCancellable> = []
     private let client: AccountAPIClient

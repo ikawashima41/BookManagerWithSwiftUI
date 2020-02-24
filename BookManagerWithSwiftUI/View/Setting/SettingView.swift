@@ -7,11 +7,12 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SettingView: View {
 
     @State var enableSignOut: Bool = false
-    private let viewModel = SettingViewModel()
+    @ObservedObject var viewModel = SettingViewModel()
 
     var body: some View {
         NavigationView {
