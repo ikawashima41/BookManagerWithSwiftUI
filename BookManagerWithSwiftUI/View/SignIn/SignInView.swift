@@ -32,7 +32,7 @@ struct SignInView: View {
                     if viewModel.enableSignIn {
                         Button(action: {
                             self.showHomeView.toggle()
-                            //self.viewModel.signIn()
+                            self.viewModel.signIn()
                         }) {
                             Text("ログイン")
                         }.sheet(isPresented: $showHomeView) {

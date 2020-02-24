@@ -39,7 +39,7 @@ struct SignUpView: View {
                 if viewModel.enableSignUp {
                     Button(action: {
                         self.showHomeView.toggle()
-                        //self.viewModel.signUp()
+                        self.viewModel.signUp()
                     }) {
                         Text("新規登録")
                     }.sheet(isPresented: $showHomeView) {
