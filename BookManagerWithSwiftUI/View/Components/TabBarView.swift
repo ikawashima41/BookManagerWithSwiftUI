@@ -11,16 +11,16 @@ import SwiftUI
 struct TabBarView: View {
     var body: some View {
         TabView {
-            HomeView(bookRow: [])
+            HomeView(viewModel: HomeViewModel())
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("ホーム")
-                }
-            SettingView()
+            }
+            SettingView(viewModel: SettingViewModel())
                 .tabItem {
-                    Image(systemName: "house.fill")
+                    Image(systemName: "person.fill")
                     Text("設定")
-                }
+            }
         }
         .edgesIgnoringSafeArea(.top)
     }

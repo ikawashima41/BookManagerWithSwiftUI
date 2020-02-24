@@ -7,20 +7,27 @@
 //
 
 import SwiftUI
+import Combine
 
 struct HomeView: View {
 
     @State var showAddView: Bool = false
-
-    var bookRow: [BookRowData]
+    @ObservedObject var viewModel = HomeViewModel()
 
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(destination: EditView()) {
-                    BookRow(row: self.bookRow)
+                ForEach(viewModel.rowData) { row in
+                    NavigationLink(destination:
+                        EditView()
+                    ) {
+                        BookRow(row: row)
+                    }
                 }
             }
+            .onAppear(perform: {
+                self.viewModel.featchBookList()
+            })
             .navigationBarTitle("ホーム画面")
             .navigationBarItems(trailing:
                 Button(action: {
@@ -37,14 +44,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(bookRow: [])
+        HomeView(viewModel: HomeViewModel())
     }
-}
-
-struct BookRowData: Identifiable {
-    var id: Int
-    var title: String
-    var price: String
-    var purchaseDate: String
-    var image: String
 }
