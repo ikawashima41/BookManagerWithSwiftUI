@@ -33,8 +33,9 @@ final class APIRequest {
             break
 
         default:
-            request.addValue(AppUserDefaults.getSessionToken(), forHTTPHeaderField: "Authorization")
-
+            if !AppUserDefaults.getSessionToken().isEmpty {
+                request.addValue(AppUserDefaults.getSessionToken(), forHTTPHeaderField: "Authorization")
+            }
         }
 
         return session.dataTaskPublisher(for: request)

@@ -62,10 +62,10 @@ enum RequestType {
 
         case .registerBook(let params), .updateBook(let params):
             return
-                [URLQueryItem(name: "title", value: params.title),
+                [URLQueryItem(name: "name", value: params.title),
+                 URLQueryItem(name: "image", value: params.image),
                  URLQueryItem(name: "price", value: "\(params.price)"),
-                 URLQueryItem(name: "purchase_date", value: params.purchaseDate),
-                 URLQueryItem(name: "image", value: params.image)]
+                 URLQueryItem(name: "purchase_date", value: params.purchaseDate)]
 
         default:
             return []
@@ -85,7 +85,7 @@ struct BookListParams {
 }
 
 struct BookParams {
-    var id: String?
+    var id: Int
     var title: String
     var price: Int
     var purchaseDate: String

@@ -11,7 +11,7 @@ struct Book: Decodable {
     var name: String
     var image: String?
     var price: Int
-    var purchaseDate: String
+    var purchaseDate: String?
 
     enum CodingKeys: String, CodingKey {
         case purchaseDate = "purchase_date"
@@ -27,7 +27,7 @@ struct BookListEntity<T: Decodable>: Decodable {
     var result: [T]
 }
 
-struct BookEntity: Decodable {
+struct BookEntity<T: Decodable>: Decodable {
     var status: Int
-    var result: Book
+    var result: T
 }

@@ -19,17 +19,17 @@ struct BookAPIClient {
             .eraseToAnyPublisher()
     }
 
-    func registerBook(params: BookParams) -> AnyPublisher<BookEntity, Error>? {
+    func registerBook(params: BookParams) -> AnyPublisher<BookEntity<Book>, Error>? {
         return try? request.build(.registerBook(params))
             .tryMap { try self.request.validate($0.data, $0.response) }
-            .decode(type: BookEntity.self, decoder: JSONDecoder())
+            .decode(type: BookEntity<Book>.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
 
-    func updateBook(params: BookParams) -> AnyPublisher<BookEntity, Error>? {
+    func updateBook(params: BookParams) -> AnyPublisher<BookEntity<Book>, Error>? {
         return try? request.build(.updateBook(params))
             .tryMap { try self.request.validate($0.data, $0.response) }
-            .decode(type: BookEntity.self, decoder: JSONDecoder())
+            .decode(type: BookEntity<Book>.self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
 }
