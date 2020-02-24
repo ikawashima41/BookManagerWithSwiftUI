@@ -39,6 +39,7 @@
 		5B933FBF24029F6300F59FAA /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FBE24029F6300F59FAA /* EditViewModel.swift */; };
 		5B933FC124029F6F00F59FAA /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FC024029F6F00F59FAA /* SettingViewModel.swift */; };
 		5B933FC32402DD2300F59FAA /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B933FC22402DD2300F59FAA /* ImagePickerView.swift */; };
+		5B9340252403A8D400F59FAA /* BookRowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9340242403A8D400F59FAA /* BookRowData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		5B933FBE24029F6300F59FAA /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
 		5B933FC024029F6F00F59FAA /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		5B933FC22402DD2300F59FAA /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		5B9340242403A8D400F59FAA /* BookRowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRowData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,8 +225,10 @@
 		5B933F702401D07900F59FAA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5B9340262403A8E700F59FAA /* ViewData */,
 				5B933F5C2401B58000F59FAA /* HomeView.swift */,
 				5B933FBA24029F4D00F59FAA /* HomeViewModel.swift */,
+				5B933FAB24027A9A00F59FAA /* BookRow.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -271,7 +275,6 @@
 				5B933FA7240276DC00F59FAA /* AccountInfoView.swift */,
 				5B933FA924027A2500F59FAA /* BookInfoView.swift */,
 				5B933FA42402749B00F59FAA /* TabBarView.swift */,
-				5B933FAB24027A9A00F59FAA /* BookRow.swift */,
 				5B933FC22402DD2300F59FAA /* ImagePickerView.swift */,
 			);
 			path = Components;
@@ -284,6 +287,14 @@
 				5B933FAF24027DF100F59FAA /* BookAPIClient.swift */,
 			);
 			path = APIClient;
+			sourceTree = "<group>";
+		};
+		5B9340262403A8E700F59FAA /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				5B9340242403A8D400F59FAA /* BookRowData.swift */,
+			);
+			path = ViewData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +419,7 @@
 				5B933F662401C75A00F59FAA /* BookEntity.swift in Sources */,
 				5B933F372401B39F00F59FAA /* SceneDelegate.swift in Sources */,
 				5B933F5F2401B58F00F59FAA /* SettingView.swift in Sources */,
+				5B9340252403A8D400F59FAA /* BookRowData.swift in Sources */,
 				5B933FB524028E0C00F59FAA /* SignInViewModel.swift in Sources */,
 				5B933FBB24029F4D00F59FAA /* HomeViewModel.swift in Sources */,
 				5B933F5D2401B58000F59FAA /* HomeView.swift in Sources */,
